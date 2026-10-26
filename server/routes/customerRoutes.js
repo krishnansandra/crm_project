@@ -1,0 +1,11 @@
+const router=require("express").Router();
+const c=require("../controllers/customerController");
+const {protect}=require("../middleware/auth");
+const {validateCustomer}=require("../middleware/validate");
+router.use(protect);
+router.get("/",c.list);
+router.post("/",validateCustomer,c.create);
+router.get("/:id",c.getOne);
+router.put("/:id",validateCustomer,c.update);
+router.delete("/:id",c.remove);
+module.exports=router;

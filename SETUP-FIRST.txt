@@ -1,0 +1,10 @@
+QUICK START
+1. Extract the ZIP.
+2. Copy server/.env.example to server/.env and update JWT_SECRET if desired.
+   PowerShell command: Copy-Item server/.env.example server/.env
+3. Make sure MongoDB is running locally, or replace MONGO_URI with your Atlas URI.
+4. Open terminal at project root and run: npm run install:all
+5. Terminal 1: npm run dev:server
+6. Terminal 2: npm run dev:client
+7. Open http://localhost:5173
+Import postman/CRM-API.postman_collection.json into Postman.
